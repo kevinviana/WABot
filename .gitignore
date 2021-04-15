@@ -1,5 +1,5 @@
 
 session.data.json
-logs/session
+logs
 node_modules
-
+.node-persist
