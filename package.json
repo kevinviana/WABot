@@ -12,6 +12,7 @@
   "dependencies": {
     "@open-wa/wa-automate": "^3.10.15",
     "child_process": "^1.0.2",
-    "gify": "^0.2.0"
+    "gify": "^0.2.0",
+    "puppeteer": "^8.0.0"
   }
 }
