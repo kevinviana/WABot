@@ -4,7 +4,8 @@ services:
     app:
         build: .
         restart: always
-        command: npm run dev
-        ports: 3000:3000
+        command: npm run start
+        ports: 
+            - 3000:3000
         volumes: 
             - .:/usr/app
