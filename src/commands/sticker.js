@@ -5,9 +5,7 @@ const fs = require("fs");
 
 
 exports.run = async (client, message) => {
-    if (message.quotedMsgObj==null || message.isMediaObj==null){
-        client.reply(message.from, "❎ Please caption/quote some picture!", message.id);
-    }else if (message.isMediaObj && message.type === "image") {
+    if (message.isMediaObj && message.type === "image") {
         const waiting = await client.reply(message.from, "_⌛ Please wait..._", message.id);
         const media = await decryptMedia(message.isMediaObj, uaOverride);
         client.sendImageAsSticker(message.from, `data:image/jpeg;base64,${media.toString("base64")}`, {
