@@ -3,7 +3,7 @@ FROM node
 WORKDIR /usr/app
 
 COPY package*.json ./
-RUN npm i
+RUN npm install
 
 
 
