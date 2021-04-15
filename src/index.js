@@ -16,7 +16,11 @@ fs.readdir("./src/commands", (e, files) => {
 
 let prefix = ".";
 
-wa.create().then(client => start(client));
+wa.create({
+  useChrome: true,
+  headless: true,
+  chromiumArgs: ["--no-sandbox", "--disable-setuid-sandbox"]
+}).then(client => start(client));
 
 let args;
 let command;
