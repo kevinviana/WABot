@@ -1,4 +1,4 @@
 
 session.data.json
-./logs
+logs/session
 node_modules
