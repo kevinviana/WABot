@@ -7,7 +7,7 @@ const fs = require("fs");
 exports.run = async (client, message) => {
     if (message.isMediaObj && message.type === "image") {
         const waiting = await client.reply(message.from, "_⌛ Please wait..._", message.id);
-        const media = await decryptMedia(message.isMediaObj, uaOverride);
+        const media = await decryptMedia(message.isMediaObj);
         client.sendImageAsSticker(message.from, `data:image/jpeg;base64,${media.toString("base64")}`, {
             author: message.sender.pushname,
             pack: "WABot"
